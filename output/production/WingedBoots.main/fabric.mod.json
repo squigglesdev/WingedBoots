@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "wingedboots",
+	"version": "${version}",
+	"name": "Winged Boots",
+	"description": "A simple mod that adds winged boots, crafted with modern Minecraft mechanics!",
+	"authors": [
+		"Squigglesdev"
+	],
+	"contact": {
+		"homepage": "https://squiggles.dev/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/wingedboots/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "dev.squiggles.WingedBoots"
+		],
+		"client": [
+			"dev.squiggles.WingedBootsClient"
+		]
+	},
+	"mixins": [
+		"wingedboots.mixins.json",
+		{
+			"config": "wingedboots.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

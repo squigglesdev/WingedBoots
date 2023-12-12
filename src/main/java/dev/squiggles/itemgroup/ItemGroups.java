@@ -21,6 +21,7 @@ public class ItemGroups {
                         .icon(() -> new ItemStack(Items.HOVER_BOOTS)).entries((displayContext, entries) -> {
                             entries.add(new ItemStack(Items.HOVER_BOOTS));
                             entries.add(new ItemStack(Items.HOVER_TEMPLATE));
+                            entries.add(new ItemStack(Items.CLOUD_BOTTLE));
                         }).build());
     }
 

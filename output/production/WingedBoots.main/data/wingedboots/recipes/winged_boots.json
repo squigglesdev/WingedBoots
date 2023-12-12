@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smithing_transform",
+    "addition": {
+        "item": "minecraft:feather"
+    },
+    "template": {
+        "item": "playerutils:floaty_smithing_template"
+    },
+    "base": {
+        "item": "minecraft:netherite_boots"
+    },
+    "result": {
+        "item": "playerutils:winged_boots"
+    }
+}

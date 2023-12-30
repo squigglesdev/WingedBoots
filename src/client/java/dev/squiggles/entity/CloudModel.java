@@ -7,6 +7,7 @@ import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 
+
 public class CloudModel<T extends CloudEntity> extends SinglePartEntityModel<T> {
 	private final ModelPart cloud;
 	public CloudModel(ModelPart root) {
@@ -15,7 +16,7 @@ public class CloudModel<T extends CloudEntity> extends SinglePartEntityModel<T> 
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData bb_main = modelPartData.addChild("cloud", ModelPartBuilder.create().uv(0, 0).cuboid(-24.0F, 8F, -13.0F, 48.0F, 8.0F, 24.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
+		ModelPartData bb_main = modelPartData.addChild("cloud", ModelPartBuilder.create().uv(0, 0).cuboid(-24.0F, -24.0F, -12.0F, 48.0F, 8.0F, 24.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 		return TexturedModelData.of(modelData, 256, 256);
 	}
 	@Override

@@ -45,6 +45,11 @@ public class CloudEntity extends Entity {
     }
 
     @Override
+    public boolean canHit() {
+        return true;
+    }
+
+    @Override
     public ActionResult interact(PlayerEntity player, Hand hand) {
         WingedBoots.LOGGER.info("PLEASE WORK");
         if (player.shouldCancelInteraction()) {
@@ -52,9 +57,10 @@ public class CloudEntity extends Entity {
         }
         ItemStack itemStack = player.getStackInHand(hand);
         if (itemStack.isOf(Items.GLASS_BOTTLE)) {
-            player.playSound(SoundEvents.ENTITY_WANDERING_TRADER_DRINK_MILK, 1.0f, 1.0f);
+            player.playSound(SoundEvents.ITEM_HONEY_BOTTLE_DRINK, 1.0f, 1.0f);
             ItemStack itemStack2 = ItemUsage.exchangeStack(itemStack, player, dev.squiggles.item.Items.CLOUD_BOTTLE.getDefaultStack());
             player.setStackInHand(hand, itemStack2);
+            this.discard();
             return ActionResult.success(this.getWorld().isClient);
         }
         return super.interact(player, hand);

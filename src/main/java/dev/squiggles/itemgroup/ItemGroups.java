@@ -1,5 +1,6 @@
 package dev.squiggles.itemgroup;
 
+import dev.squiggles.WingedBoots;
 import dev.squiggles.item.Items;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -16,10 +17,10 @@ public class ItemGroups {
 
     public static void registerItemGroups() {
         JOLON_GROUP = Registry.register(Registries.ITEM_GROUP,
-                new Identifier("playerutils", "jolon_group"),
+                new Identifier(WingedBoots.MODID, "winged_boots"),
                 FabricItemGroup.builder().displayName(Text.translatable("itemgroup.jolon_group"))
-                        .icon(() -> new ItemStack(Items.HOVER_BOOTS)).entries((displayContext, entries) -> {
-                            entries.add(new ItemStack(Items.HOVER_BOOTS));
+                        .icon(() -> new ItemStack(net.minecraft.item.Items.FEATHER)).entries((displayContext, entries) -> {
+                            entries.add(new ItemStack(Items.WINGED_BOOTS));
                             entries.add(new ItemStack(Items.HOVER_TEMPLATE));
                             entries.add(new ItemStack(Items.CLOUD_BOTTLE));
                         }).build());

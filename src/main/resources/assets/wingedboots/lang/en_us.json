@@ -1,7 +1,10 @@
 {
   "itemgroup.jolon_group": "Winged Boots",
+
   "item.wingedboots.winged_boots": "Winged Boots",
   "item.wingedboots.floaty_smithing_template": "Smithing Template",
+  "item.wingedboots.cloud_in_a_bottle": "Cloud in a Bottle",
+
   "effect.wingedboots.float": "Floating",
   "entity.wingedboots.cloud": "Floating Cloud"
 }

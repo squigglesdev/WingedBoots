@@ -4,12 +4,12 @@
         "item": "minecraft:feather"
     },
     "template": {
-        "item": "playerutils:floaty_smithing_template"
+        "item": "wingedboots:floaty_smithing_template"
     },
     "base": {
         "item": "minecraft:netherite_boots"
     },
     "result": {
-        "item": "playerutils:winged_boots"
+        "item": "wingedboots:winged_boots"
     }
 }

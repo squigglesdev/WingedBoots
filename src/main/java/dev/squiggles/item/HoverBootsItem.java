@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 public class HoverBootsItem extends ArmorItem{
     private static final Map<ArmorMaterial, StatusEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>())
-                    .put(Items.HOVER_ARMOR_MATERIAL, new StatusEffectInstance(StatusEffects.FLOATING, 1, 255, false, false, false)).build();
+                    .put(Items.HOVER_ARMOR_MATERIAL, new StatusEffectInstance(StatusEffects.FLOATING, 5, 255, false, false, false)).build();
 
     public HoverBootsItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
